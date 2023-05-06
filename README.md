@@ -1,5 +1,7 @@
 # Go-Chat
 
+![DEMO](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjYxM2E5NWRiZTMxMDg5MTY4YzhiZjlmNTY2OTczY2QwZGZiMDM0ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/qDsnp5JbDoBCzlBMFH/giphy.gif)
+
 ## Description
 
 Communicate with ChatGPT through terminal. Written in Go.

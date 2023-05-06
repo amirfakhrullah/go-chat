@@ -50,6 +50,7 @@ func main() {
 
 		defer stream.Close()
 
+		fmt.Print("Response: ")
 		for {
 			response, err := stream.Recv()
 			if errors.Is(err, io.EOF) {
