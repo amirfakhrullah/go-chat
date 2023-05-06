@@ -39,7 +39,7 @@ func main() {
 			Messages: []openai.ChatCompletionMessage{
 				{
 					Role:    openai.ChatMessageRoleUser,
-					Content: "Give me a response for this question in bullet points: " + input,
+					Content: input,
 				},
 			},
 			Stream: true,
