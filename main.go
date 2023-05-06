@@ -7,8 +7,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/amirfakhrullah/go-chat/cli"
-	"github.com/amirfakhrullah/go-chat/helpers"
+	"github.com/amirfakhrullah/go-chat/pkg/cli"
+	"github.com/amirfakhrullah/go-chat/pkg/helpers"
 	_ "github.com/joho/godotenv/autoload"
 	openai "github.com/sashabaranov/go-openai"
 )
