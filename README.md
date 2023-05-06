@@ -17,6 +17,18 @@ Communicate with ChatGPT through terminal. Written in Go.
 go install github.com/amirfakhrullah/go-chat@latest
 ```
 
+### Set Open AI API Key in your `.zshrc`
+
+```bash
+export OPEN_AI_API_KEY="xxxxxxxxxxxxx"
+```
+
+And then
+
+```bash
+source ~/.zshrc
+```
+
 ### Run Script
 
 Run the script below to get started:
