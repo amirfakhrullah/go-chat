@@ -30,10 +30,10 @@ func main() {
 
 	var input string
 	var inputErr error
-	input, inputErr = cli.GetInitialQuestion()
+	input, inputErr = cli.GetQuestion(true)
 	helpers.HandlePanic(inputErr)
 
-	for input != ":q" {
+	for input != ":q!" {
 		req := openai.ChatCompletionRequest{
 			Model:     openai.GPT3Dot5Turbo,
 			Messages: []openai.ChatCompletionMessage{
@@ -62,7 +62,7 @@ func main() {
 			fmt.Printf(response.Choices[0].Delta.Content)
 		}
 
-		input, inputErr = cli.GetNextQuestion()
+		input, inputErr = cli.GetQuestion(false)
 		helpers.HandlePanic(inputErr)
 	}
 }
