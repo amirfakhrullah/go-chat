@@ -1,6 +1,6 @@
 # Go-Chat
 
-![DEMO](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjYxM2E5NWRiZTMxMDg5MTY4YzhiZjlmNTY2OTczY2QwZGZiMDM0ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/qDsnp5JbDoBCzlBMFH/giphy.gif)
+![DEMO](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODBmNTMxZjgwNWE4NjM2ZGQzMWRkM2VjMDA5YjFmODE5ZGFlYTQ0NCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/dJUitAQU6zNrLsiAbB/giphy.gif)
 
 ## Description
 
