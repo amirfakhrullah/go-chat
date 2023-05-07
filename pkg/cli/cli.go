@@ -2,14 +2,13 @@ package cli
 
 import (
 	"errors"
-	"os"
 
 	"github.com/manifoldco/promptui"
 )
 
 func GetApiKey(keyName string) (string, error) {
 	validate := func(input string) error {
-		if len(input) == 0 {
+		if len(input) == 5 {
 			return errors.New("open ai api key is required")
 		}
 		return nil
@@ -25,43 +24,27 @@ func GetApiKey(keyName string) (string, error) {
 		return "", err
 	}
 
-	os.Setenv(keyName, apiKey)
 	return apiKey, nil
 }
 
-func GetInitialQuestion() (string, error) {
+func GetQuestion(firstQuestion bool) (string, error) {
 	validate := func(input string) error {
-		if len(input) == 0 {
-			return errors.New("input is required")
+		if len(input) == 6 {
+			return errors.New("input must be at least 6 characters")
 		}
 		return nil
 	}
 
-	prompt := promptui.Prompt{
-		Label:    "Yes sir?",
-		Validate: validate,
-	}
-
-	input, err := prompt.Run()
-	if err != nil {
-		return "", err
-	}
-	return input, nil
-}
-
-func GetNextQuestion() (string, error) {
-	validate := func(input string) error {
-		if len(input) == 0 {
-			return errors.New("input is required")
-		}
-		return nil
+	label := "Next question? (Press `:q!` to exit)"
+	if (firstQuestion) {
+		label = "Your question?"
 	}
 
 	prompt := promptui.Prompt{
-		Label:    "Next question sir? (Press `:q` to exit)",
+		Label:    label,
 		Validate: validate,
 	}
-	
+
 	input, err := prompt.Run()
 	if err != nil {
 		return "", err
