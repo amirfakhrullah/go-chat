@@ -29,7 +29,7 @@ func GetApiKey(keyName string) (string, error) {
 
 func GetQuestion(firstQuestion bool) (string, error) {
 	validate := func(input string) error {
-		if len(input) == 6 {
+		if (input != ":q!" || len(input) == 6 ){
 			return errors.New("input must be at least 6 characters")
 		}
 		return nil
